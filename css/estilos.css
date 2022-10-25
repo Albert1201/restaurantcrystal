@@ -1,0 +1,484 @@
+/* importar fuentes */
+@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap'); */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+/**************************************** Estilos base ******************************************************/
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.container--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column {
+  width: 100%;
+}
+
+/***** Estilos de header ******/
+.main-header {
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #de423a;
+  padding: 10px;
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+}
+
+.main-header__contactInfo__phone {
+  background: #de423a;
+  color: white;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.main-header__contactInfo__address {
+  padding: 10px;
+  margin: 0;
+}
+
+.main-header [class*="icon-"]:before {
+  position: relative;
+  top: 2px;
+  right: 5px;
+}
+
+/* estilos de menu */
+.main-nav {
+  width: 100%;
+  position: relative;
+  z-index: 2000;
+  padding: 10px;
+}
+
+/* menu boton */
+.icon-menu {
+  display: block;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  line-height: 42px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icon [class*="icon-"] {
+  color: black;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 50%;
+}
+
+.social-icon__link {
+  text-decoration: none;
+}
+
+/* esconder menu */
+.menu {
+  /* display: none; */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s linear;
+}
+
+.menu__link {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu__link:hover {
+  background: #de423a;
+}
+
+.menu__link--select {
+  background: #de423a;
+}
+
+.menu__link.menu--select {
+  background: #de423a;
+}
+
+.mostrar {
+  height: 200px;
+}
+
+/* estilos de banner */
+.banner {
+  margin-top: -60px;
+  position: relative;
+}
+
+.banner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  top: 0;
+}
+
+.banner__img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.banner__content {
+  width: 90%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  z-index: 1500;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*********** estilos principales **********/
+.group--color .container {
+  background: #de423a;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.main__title {
+  margin: 15px 0;
+  font-size: 1.8em;
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+}
+
+.column__title {
+  font-size: 1.3em;
+}
+
+.main__about__description .column:nth-child(2) {
+  padding: 10px;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 120px;
+  background: #de423a;
+  color: white;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.group__title {
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.8em;
+  margin: 30px;
+}
+
+.today-special .column {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.today-special__img {
+  margin: aunto;
+  max-width: 350px;
+}
+
+.today-special__title {
+  text-align: center;
+  font-size: 1.3em;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.today-special__price {
+  font-size: 1.5em;
+  color: #de423a;
+  font-weight: 100;
+}
+
+/*********** estilos del footer **********/
+.main-footer {
+  background: #222;
+  color: white;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 0.8em;
+}
+
+.copy {
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.main-footer [class*="icon-"] {
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer [class*="icon-"]:before {
+  position: relative;
+  top: 3px;
+  right: 5px;
+}
+
+
+
+
+/*********** estilos de responsive **********/
+
+@media screen and (min-width: 480px) {
+  .logo {
+    color: white;
+  }
+  .main-header__contactInfo {
+    text-align: right;
+  }
+  .banner {
+    margin-top: -200px;
+    z-index: -1000;
+  }
+
+  .banner__img {
+    height: 600px;
+  }
+
+  .main-header__contactInfo__phone {
+    background: none;
+  }
+
+  .main-header__contactInfo__address {
+    color: white;
+  }
+
+  .column--50 {
+    width: 48%;
+  }
+
+  .main-nav {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  .banner {
+    margin-top: -160px;
+    z-index: -1000;
+  }
+
+  .banner__content {
+    font-size: 2em;
+  }
+
+  .main {
+    padding-bottom: 15px;
+  }
+
+  .main__about__description .column:nth-child(2) {
+    padding-left: 20px;
+    font-size: 0.9em;
+  }
+
+  .main__about__description .btn {
+    margin: 0;
+  }
+
+  .today-special .column {
+    border: 5px solid #ddd;
+    padding: 5px;
+  }
+
+  .today-special__img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .main-footer .container--flex{
+    align-items: flex-start;
+  }
+
+  .column--50 {
+    width: 48%;
+  }
+
+  .column--50-25 {
+    width: 48%;
+  }
+
+  .column--33 {
+    width: 32%;
+  }
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .main__title {
+    font-size: 2.2em;
+  }
+
+  .main__about__description {
+    margin-top: 30px;
+  }
+
+  .main__about__description .column--50:nth-child(2) {
+    font-size: 1em;
+  }
+
+  .main__about__description .column--50:nth-child(2) .column__txt {
+    line-height: 30px;
+  }
+
+  .column--50-25 {
+    width: 24%;
+  }
+  .column__title {
+    font-size: 1em;
+  }
+  .group__title {
+    font-size: 2.2em;
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1000px;
+  }
+  .logo {
+    font-size: 2em;
+    padding: 0;
+  }
+
+  .main-header__contactInfo__phone,
+  .main-header__contactInfo__address {
+    padding: 0;
+    font-size: 1.15em;
+  }
+
+  .main-nav {
+    padding: 0;
+  }
+  .banner__img {
+    height: 800px;
+  }
+
+  .banner__content {
+    font-size: 2.5em;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+  .menu {
+    position: static;
+    display: flex;
+    height: auto;
+    width: auto;
+  }
+  .menu__link {
+    padding: 20px;
+  }
+  .group--color .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .maing__title {
+    font-size: 2.3em;
+  }
+  .main__about__description .column--50:nth-child(2) .column__txt {
+    line-height: 45px;
+  }
+  .today-special__title {
+    font-size: 1.4em;
+  }
+  .today-special__price {
+    font-size: 2.8em;
+  }
+  .main-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1400px;
+  }
+  .main__about__description .column:nth-child(1) img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  .today-special__img {
+    height: 300px;
+  }
+}
